@@ -1,0 +1,17 @@
+<view class="content">
+  <view class="box">
+    <view 
+      wx:for="{{ colorArr }}" 
+      class="cell {{ arrClass[index] || '' }}" 
+      wx:key="index" 
+      style="background-color:{{ item.color }}"
+      data-index="{{ index }}"
+      bindtap="tapCell">
+      <image src="../../static/images/correct.png" class="icon"></image>
+      <text>{{ wordsArr[index] || '' }}</text>
+    </view>
+  </view>
+  <view class="btns">
+    <view class="btn" bindtap="change">换一换</view>
+  </view>
+</view>
